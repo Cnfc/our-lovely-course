@@ -21,3 +21,18 @@
   font-size: 20px;
 
 }
+
+#result{
+  font-size: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5% 0;
+
+}
+
+.full-width-slider input{
+    display: none !important;
+}
+
+.full-width-slider .ul-slider-track {
+  margin-left: 15px;
+}

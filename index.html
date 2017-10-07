@@ -24,12 +24,58 @@
       <h1>Speed Reader App</h1>
       <p>For an efficient reading experience</p>
     </div>
+
+
+    <!-- Font-size and speed -->
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <div>
+          FONTSIZE: <span id="fontsize">50</span> px;
+        </div>
+      </div>
+      <div class="ui-block-b">
+        <div>
+          <span id="speed">300</span>WORDS PER MINUTE.
+        </div>
+      </div>
+    </div>
+
+<!-- FONT SIZE AND SPEED -->
+
+
+<div class="ui-grid-a">
+  <div class="ui-block-a">
+    <form class="full-width-slider">
+      <input type="range" name="fontsizeslider" id="fontsizeslider" min="20" max="100" value="50" step="5" data-hightlight="true">
+    </form>
+  </div>
+  <div class="ui-block-b">
+    <form class="full-width-slider">
+      <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="300" step="50" data-hightlight="true">
+    </form>
+  </div>
+</div>
+
+
+  <!-- PROGRESS -->
+  <form class="full-width-slider">
+    <label for="progressslider">PROGRESS: <span id="percentage">0</span>%</label>
+    <input type="range" name="progressslider" id="progressslider" min="0" max="100" value="0" data-hightlight="true">
+  </form>
+
+    <!-- The red word -->
+    <div id='result'>Word</div>
     <!-- Error message -->
     <div id="error">Please paste text in the box!</div>
 
     <!-- User Inputs -->
     <div id="inputs">
       <textarea name="name" id="userInput"></textarea>
+      <!-- Bittons -->
+      <button id="start">Start Reading</button>
+      <button id='new'>New</button>
+      <button id ='pause'>Pause</button>
+      <button id="resume">Resume</button>
     </div>
 
 
