@@ -55,10 +55,37 @@ $("#start").click(function(){
     $("#error").show();
   }
 });
+// SLICK ON NEW
+  $("#new").click(function(){
+    // reload the page
+    location.reload();
 
+  });
 
+// cLICK ON TJE STOP
+  $("#pause").click(function(){
+    clearInterval(action);
+    reading = false;
 
+    //hide pause and show resume
+    $("#pause").hide();
+    $("#resume").show();
 
+  });
+
+// CLICK ON THE RESUME
+$("#resume").click(function(){
+  //start reading
+  action = setInterval(read, frequency);
+
+  //go back to reading MODE
+  reading = true;
+
+  //hide resume and show pause
+  $("#resume").hide();
+  $("#pause").show();
+
+});
 
 
 
