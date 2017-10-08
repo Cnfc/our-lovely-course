@@ -87,7 +87,18 @@ $("#resume").click(function(){
 
 });
 
+//CHANGE FONT-SIZE
+$("#fontsizeslider").on("slidestop", function(event, ui) {
+  //refresh the SLIDER
+  $("#fontsizeslider").slider("refresh");
 
+  // get the value of SLIDER
+  var slidervalue = parseInt($("#fontsizeslider").val());
+
+
+  $("#result").css("fontSize", slidervalue)
+  $("#fontsize").rext(slidervalue);
+});
 
 
 
