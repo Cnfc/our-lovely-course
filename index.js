@@ -7,11 +7,6 @@ $(function(){
   var action;
   var frequency = 200;
 
-
-
-
-
-
   $("#new").hide();
   $("#resume").hide();
   $("#pause").hide();
@@ -96,10 +91,30 @@ $("#fontsizeslider").on("slidestop", function(event, ui) {
   var slidervalue = parseInt($("#fontsizeslider").val());
 
 
-  $("#result").css("fontSize", slidervalue)
-  $("#fontsize").rext(slidervalue);
+  $("#result").css("fontSize", slidervalue);
+  $("#fontsize").text(slidervalue);
 });
 
+// CHANGE SPEED
+$("#speedslider").on("slidestop", function(event, ui) {
+  //refresh the SLIDER
+  $("#speedslider").slider("refresh");
+
+  // get the value of SLIDER
+  var slidervalue = parseInt($("#speedslider").val());
+
+  $("#speed").text(slidervalue);
+  //stop the reading
+  clearInterval(action);
+
+  //change frequency
+  frequency = 60000/slidervalue;
+  //resume reading if we`re in reading MODE
+  if(reading){
+    action = setInterval(read, frequency);
+  }
+
+});
 
 
 
